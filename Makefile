@@ -25,11 +25,11 @@ SRCDIR=src
 INCDIR=-Iinclude
 
 _OBJ= main.o sketch.o loop.o once.o event.o MEOW.o\
-      getpath.o whereami.o vector.o
+      getpath.o whereami.o vector.o particle.o
 SDL_OBJ=$(addprefix $(SDL_OBJDIR)/, $(_OBJ))
 EMS_OBJ=$(addprefix $(EMS_OBJDIR)/, $(_OBJ))
 
-SDL_LIB=-lSDL2 -lSDL2 -lSDL2_image
+SDL_LIB=-lSDL2 -lSDL2 -lSDL2_image -lm
 DEFINE= -DSDL_MAIN_HANDLED -DSTB_RECT_PACK_IMPLEMENTATION\
         -DSTB_TRUETYPE_IMPLEMENTATION -DSTBTTF_IMPLEMENTATION
 
@@ -43,7 +43,7 @@ default:
 
 .PHONY:ems
 ems: $(EMS_OBJ)
-	$(EMCC) -o $(EMOUT) $^ $(EMFLAGS) --preload-file $(ASSETS)
+	$(EMCC) -o $(EMOUT) $^ $(EMFLAGS) -lm --preload-file $(ASSETS)
 
 $(EMS_OBJDIR)/%.o: $(SRCDIR)/%.c
 	$(EMCC) -c -o $@ $< $(EMFLAGS) $(DEFINE) $(INCDIR)

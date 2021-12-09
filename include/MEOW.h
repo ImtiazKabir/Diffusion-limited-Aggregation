@@ -16,7 +16,8 @@ void MEOW_Repeat(
   SDL_Renderer *renderer,
   int const WIDTH,
   int const HEIGHT,
-  int const FPS
+  int const FPS,
+  int const NUM_OF_PARTICLES
 );
 
 void MEOW_Destroy(SDL_Window *window, SDL_Renderer *renderer);
