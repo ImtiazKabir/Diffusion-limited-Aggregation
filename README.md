@@ -15,6 +15,7 @@ This is an implementation of Diffusion-limited aggregation in [SDL2](https://www
 
 ## Usage as EMSCRIPTEN project
 This is the [deployed site](https://imtiazkabir.github.io/Diffusion-limited-Aggregation/) for DLA. Enjoy! *You can press SPACE to toggle the render of moving particles.*
+Emscripten compilation can be done with `make ems`
 
 
 *This project uses [stb_ds](http://nothings.org/stb_ds/)*
