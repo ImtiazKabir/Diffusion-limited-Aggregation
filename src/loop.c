@@ -53,8 +53,10 @@ void update(
     }
     for (int j = 0; j < arrlen(*stuck_indices_p); ++j) {
       int const k = (*stuck_indices_p)[j];
-      double const r = particles[i]->r;
-      if (Vector_SqDist(particles[i]->loc, particles[k]->loc) <= r*r) {
+      double const r1 = particles[i]->r;
+      double const r2 = particles[k]->r;
+      double const d = r1 + r2;
+      if (Vector_SqDist(particles[i]->loc, particles[k]->loc) <= d*d) {
         particles[i]->can_move = false;
         arrput(proxy_stuck, i);
         break;

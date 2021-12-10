@@ -38,6 +38,7 @@ void setup(
 
   (*particles_p)[0] = Particle_Create(WIDTH/2.0, HEIGHT/2.0);
   (*particles_p)[0]->can_move = false;
+  (*particles_p)[0]->r *= 10;
   arrput(*stuck_indices_p, 0);
 
   for (int i = 1; i < NUM_OF_PARTICLES; ++i) {

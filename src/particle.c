@@ -16,7 +16,7 @@ Particle * Particle_Create(double x, double y) {
 
   p->loc = Vector_CreateXY(x, y);
   p->vel = Vector_Create();
-  p->r = 2.0;
+  p->r = 3.5;
   p->speed = 3.0;
   p->can_move = true;
 

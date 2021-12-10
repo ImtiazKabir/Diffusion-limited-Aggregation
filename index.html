@@ -7,11 +7,49 @@
     http-equiv="Content-Type"
     content="text/html; charset=utf-8"
   >
+
+  <style>
+    .context {
+      margin-bottom: 2em;
+    }
+
+    canvas {
+      display: block;
+      margin: 0 auto;
+    }
+  </style>
 </head>
 
 <body>
 
   <canvas id="canvas" oncontextmenu="event.preventDefault()"></canvas>
+
+  <div class="context">
+    This is an implementation of
+    <a href="https://en.wikipedia.org/wiki/Brownian_motion">
+      Brownian motion
+    </a>with
+    <a href = "https://en.wikipedia.org/wiki/Diffusion-limited_aggregation">
+      Diffusion-limited Aggregation (DLA)
+    </a><br>
+    We have a lot of colloidal particles moving in brownian motion. In the very
+    center of the canvas we have an ionized clump which is going to
+    coagulate the moving particles when they come in contact and thus eventually
+    form a larger ionized aggregate. <br><br>
+
+    This implementation has been written entirely in C 😎. With the power of
+    Webassembly it has been possible to render it in an html canvas. <br>
+    Source code can be found
+    <a href = ""https://github.com/ImtiazKabir/Diffusion-limited-Aggregation>
+    here </a>
+
+    <br>
+    <b> Press SPACE or click <i> on the canvas </i>
+    to toggle the render of moving particles.</b>
+    <br>
+    Wait patiently and enjoy! Thank you.
+  </div>
+
 
   <script type='text/javascript'>
     var Module = {
