@@ -5,6 +5,11 @@ This is an implementation of Diffusion-limited aggregation in [SDL2](https://www
 >
 > [Wikipedia](https://en.wikipedia.org/wiki/Diffusion-limited_aggregation)
 
+We have a lot of colloidal particles moving in brownian motion. In the very
+center of the canvas we have an ionized clump which is going to
+coagulate the moving particles when they come in contact and thus eventually
+form a larger ionized aggregate.
+
 ![init](https://github.com/ImtiazKabir/Diffusion-limited-Aggregation/blob/main/screenshots/s.PNG)
 ![final](https://github.com/ImtiazKabir/Diffusion-limited-Aggregation/blob/main/screenshots/f.PNG)
 ![growing_with_movers](https://github.com/ImtiazKabir/Diffusion-limited-Aggregation/blob/main/screenshots/gm.PNG)
